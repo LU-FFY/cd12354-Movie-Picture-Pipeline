@@ -62,8 +62,9 @@ jobs:
       - name: Install dependencies
         run: pipenv install
       - name: Run tests
+        env:
+          FAIL_TEST: "true"
         run: pipenv run test
-
   build:
     name: Build
     needs: [lint, test]
