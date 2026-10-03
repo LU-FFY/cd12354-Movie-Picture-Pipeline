@@ -153,3 +153,10 @@ jobs:
 
       - name: Verify rollout
         run: kubectl rollout status deployment/frontend --timeout=120s
+
+      - name: Write job summary
+        run: |
+          SERVICE_URL=$(kubectl get svc frontend -o jsonpath='{.status.loadBalancer.ingress[0].hostname}')
+          echo "### Frontend Deployment Summary" >> $GITHUB_STEP_SUMMARY
+          echo "- **Image deployed:** \`${{ needs.build-and-push.outputs.image }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "- **Service URL:** http://$SERVICE_URL" >> $GITHUB_STEP_SUMMARY

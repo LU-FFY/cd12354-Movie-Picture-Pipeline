@@ -1,3 +1,8 @@
+![Frontend CI](https://github.com/LU-FFY/cd12354-Movie-Picture-Pipeline/actions/workflows/frontend-ci.yaml/badge.svg)
+![Backend CI](https://github.com/LU-FFY/cd12354-Movie-Picture-Pipeline/actions/workflows/backend-ci.yaml/badge.svg)
+![Frontend CD](https://github.com/LU-FFY/cd12354-Movie-Picture-Pipeline/actions/workflows/frontend-cd.yaml/badge.svg)
+![Backend CD](https://github.com/LU-FFY/cd12354-Movie-Picture-Pipeline/actions/workflows/backend-cd.yaml/badge.svg)
+
 # Movie Picture Pipeline
 
 You've been brought on as the DevOps resource for a development team that manages a web application that is a catalog of Movie Picture movies. They're in dire need of automating their development workflows in hopes of accelerating their release cycle. They'd like to use Github Actions to automate testing, building and deploying their applications to an existing Kubernetes cluster.
