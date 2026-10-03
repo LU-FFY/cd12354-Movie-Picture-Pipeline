@@ -153,3 +153,5 @@ jobs:
           cd k8s
           kustomize edit set image backend=${{ needs.build-and-push.outputs.image }}
           kustomize build | kubectl apply -f -
+      - name: Verify rollout
+        run: kubectl rollout status deployment/backend --timeout=120s
